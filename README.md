@@ -65,7 +65,7 @@ This is a personal project application that is focused on the study and applied 
 
 ## **Endpoints**
 
-### <getText>**GET**</getText> /api/v1/contacts
+### <span style="color: blue">**GET**</span> /api/v1/contacts
 
 Returns an array of contact objects.
 
