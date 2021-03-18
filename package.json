@@ -4,8 +4,10 @@
   "description": "This is an practice application using Node.js with express, TypeScript, and the testing software Mocha with Chai.",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev --respawn src/index.ts",
+    "start": "npm run serve",
+    "serve": "node src/index.js",
     "build": "ts-node src/index.ts",
+    "postinstall": "npm run build",
     "test": "mocha -r ts-node/register api/v1/test/**/*.spec.ts"
   },
   "author": "Ken Bell",
