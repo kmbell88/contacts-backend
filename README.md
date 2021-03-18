@@ -23,7 +23,7 @@ This is a personal project application that is focused on the study and applied 
 - Best coding practices, including clearly and concisely written and maintained code, intuitive flow of written and executed code, well-structured file organization following principles of MVC architecture, and optimizing functional and modular components.
 - Techniques of proper documentation.
 
-**Note:** In this version of the application **there is no external database** being used, making this a sandbox application used primarily for the objectives listed above. It includes a static list of contacts for the sake of example which can be manipulated by the user and may be stored locally to the server. Since this is deployed on a free-tier server on Heroku, everytime the dyno goes to sleep and wakes, all previously manipulated data is cleared from its cache and the application is restored to its default state. Future versions will feature a fully operational database.
+**Note:** In this version of the application **there is no external database** being used, making this a sandbox application used primarily for the objectives listed above. It includes a static list of contacts for the sake of example which can be manipulated by the user and may be stored locally to the server. Future versions will feature a fully operational database.
 
 ## **Contact Properties**
 
