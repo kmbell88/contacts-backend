@@ -35,8 +35,6 @@ This is a personal project application that is focused on the study and applied 
 | **phone** | String | Phone number of the contact | [Optional]<br>Must be sent as an **unformatted** string of numbers (i.e. “8005550000” is valid; “800-555-0000” is invalid). Returned as an unformatted string of numbers.<br>May extend to formatted phone numbers in the future, which will not affect prior functionality. |
 | **email** | String | Email of the contact        | [Optional]                                                                                                                                                                                                                                                                   |
 
----
-
 ## **Example Contact Object**
 
 <pre>
