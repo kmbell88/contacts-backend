@@ -1,7 +1,7 @@
 //import { contacts } from './test-contacts';  // TESTING SCRIPT
 import { contacts } from './sample-contacts';   // PRODUCTION SCRIPT:
 import { Contact } from '../interfaces/contact.interface';
-import { v4 as uuid} from 'uuid';
+import { v4 as uuid } from 'uuid';
 
 export const validateContact = {
   id: (id: string) => {
