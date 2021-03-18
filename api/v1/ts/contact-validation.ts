@@ -38,8 +38,7 @@ export const validateContact = {
     if (processContact) {
       Object.assign(processContact, newContact);
       return { message: "Contact successfully updated" };
-    }  
-    else {
+    } else {
       newContact.id = generateId();
       contacts.push(newContact);
       return { message: "Contact successfully created" };
