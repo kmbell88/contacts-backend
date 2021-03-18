@@ -27,13 +27,13 @@ This is a personal project application that is focused on the study and applied 
 
 ## **Contact Properties**
 
-| Name      | Type   | Description                 | Notes                                                                                                                                                                                                                                                                    |
-| --------- | ------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **id**    | String | Unique ID of the contact    | Required; Provided by the API                                                                                                                                                                                                                                            |
-| **fname** | String | First name of the contact   | Required                                                                                                                                                                                                                                                                 |
-| **lname** | String | Last name of the contact    | Required                                                                                                                                                                                                                                                                 |
-| **phone** | String | Phone number of the contact | [Optional]<br>Must be sent as an **unformatted** string of numbers (i.e. “8005550000” is valid; “800-555-0000” is invalid). Returned as an unformatted string of numbers.May extend to formatted phone numbers in the future, which will not affect prior functionality. |
-| **email** | String | Email of the contact        | [Optional]                                                                                                                                                                                                                                                               |
+| Name      | Type   | Description                 | Notes                                                                                                                                                                                                                                                                        |
+| --------- | ------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **id**    | String | Unique ID of the contact    | Required; Provided by the API                                                                                                                                                                                                                                                |
+| **fname** | String | First name of the contact   | Required                                                                                                                                                                                                                                                                     |
+| **lname** | String | Last name of the contact    | Required                                                                                                                                                                                                                                                                     |
+| **phone** | String | Phone number of the contact | [Optional]<br>Must be sent as an **unformatted** string of numbers (i.e. “8005550000” is valid; “800-555-0000” is invalid). Returned as an unformatted string of numbers.<br>May extend to formatted phone numbers in the future, which will not affect prior functionality. |
+| **email** | String | Email of the contact        | [Optional]                                                                                                                                                                                                                                                                   |
 
 ---
 
@@ -55,7 +55,7 @@ This is a personal project application that is focused on the study and applied 
 
 Returns an array of contact objects.
 
-**Requirements:** None
+**Requirements:** None<br>
 **Parameters:** None
 **Responses:**
 
@@ -68,10 +68,10 @@ Returns an array of contact objects.
 
 Returns a single contact as an object.
 
-**Requirements:** None
+**Requirements:** None<br>
 **Parameters:**
 
-- **id**: As a parameter in the endpoin
+- **id**: As a parameter in the endpoint
 
 **Responses:**
 
@@ -84,7 +84,7 @@ Returns a single contact as an object.
 
 Creates a new contact.
 
-**Requirements:** None
+**Requirements:** None<br>
 **Parameters:**
 
 - **fname**
@@ -105,11 +105,11 @@ Creates a new contact.
 
 ### **PATCH** /api/v1/contacts/
 
-Updates an existing contact
-**Note:** You must only pass optional parameters that you want updated in the contact. Optional parameters sent as empty strings, undefined, or null may overwrite values in the database unintentionally or return a 422 status. Specific reasoning for this is because a user may want to remove an optional field such as a phone number or email without replacing it with a new value, so by sending an empty string it will overwrite the value with the empty string
+Updates an existing contact<br>
+**Note:** You must only pass optional parameters that you want updated in the contact. Optional parameters sent as empty strings, undefined, or null may overwrite values in the database unintentionally or return a 422 status. Specific reasoning for this is because a user may want to remove an optional field such as a phone number or email without replacing it with a new value, so by sending an empty string it will overwrite the value with the empty string<br>
 **Suggestion:** If you don't want to send back only specifically updated fields, send back the entire contact object with all fields both updated and not (as you would with a PUT request) to ensure values are not unintentially changed.
 
-**Requirements:** None
+**Requirements:** None<br>
 **Parameters:**
 
 - **id**
@@ -134,7 +134,7 @@ Updates an existing contact
 
 Deletes a single contact.
 
-**Requirements:** None
+**Requirements:** None<br>
 **Parameters:**
 
 - **id**
