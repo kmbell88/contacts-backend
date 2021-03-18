@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node-dev --respawn src/index.ts",
-    "build": "tsc",
+    "build": "ts-node src/index.ts",
     "test": "mocha -r ts-node/register api/v1/test/**/*.spec.ts"
   },
   "author": "Ken Bell",
