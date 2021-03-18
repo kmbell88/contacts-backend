@@ -8,15 +8,15 @@ export const validateContact = {
     return contacts.find((contact: { id: string; }) => contact.id == id);
   },
   name: (name: string) => {
-    let nameRegex = /^[a-z ,.'-]+$/i;
+    const nameRegex = /^[a-z ,.'-]+$/i;
     return name !== "" && nameRegex.test(name);
   },
   phone: (phone: string) => {
-    let phoneRegex = /^[0-9]{10}$/;
+    const phoneRegex = /^[0-9]{10}$/;
     return phoneRegex.test(phone);
   },
   email: (email: string) => {
-    let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+([a-zA-Z0-9-]+)*$/;
+    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+([a-zA-Z0-9-]+)*$/;
     return emailRegex.test(email);
   },
   validate: (newContact: Contact) => {
