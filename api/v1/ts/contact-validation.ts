@@ -1,4 +1,4 @@
-//import { contacts } from './test-contacts';  // TESTING SCRIPT
+// import { contacts } from './test-contacts';  // TESTING SCRIPT
 import { contacts } from './sample-contacts';   // PRODUCTION SCRIPT:
 import { Contact } from '../interfaces/contact.interface';
 import { v4 as uuid } from 'uuid';
@@ -22,6 +22,7 @@ export const validateContact = {
   validate: (newContact: Contact) => {
     const { id, fname, lname, phone, email } = newContact;
     let processContact: Contact | undefined = validateContact.id(id);
+    
     if(id && !processContact)
       return { error: "Contact not found" };
     if (id && fname != undefined && !validateContact.name(fname) ||
@@ -52,11 +53,11 @@ export const getContacts = () => {
 
 export const deleteContact = (id: string) => {
   const index = contacts.findIndex(contact => contact.id === id);
-  if ( index === -1)
-    return ({ error: "Contact not found" });
+  if (index === -1)
+    return { error: "Contact not found" };
 
   contacts.splice(index, 1);
-  return ({ message: "Contact successfully deleted" });
+  return { message: "Contact successfully deleted" };
 };
 
 export const generateId = () => {
