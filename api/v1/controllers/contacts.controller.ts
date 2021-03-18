@@ -30,6 +30,6 @@ export const contacts_update_contact = async (req: Request, res: Response) => {
 
 export const contacts_delete_contact = async (req: Request, res: Response) => {
   let response = await deleteContact(req.body.id);
-    return response.error ? res.status(404).json(response) :
-                            res.status(200).json(response);
+  return response.error ? res.status(404).json(response) :
+                          res.status(200).json(response);
 };
