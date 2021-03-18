@@ -54,7 +54,7 @@ This is a personal project application that is focused on the study and applied 
 Returns an array of contact objects.
 
 **Requirements:** None<br>
-**Parameters:** None
+**Parameters:** None<br>
 **Responses:**
 
 - **200**: [{ /* All Contacts */ }]
