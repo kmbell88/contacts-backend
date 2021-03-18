@@ -31,9 +31,9 @@ export const validateContact = {
     if (id && lname != undefined && !validateContact.name(lname) ||
           !id && !validateContact.name(lname))
       return { error: "The last name entered is invalid" };
-    if(phone && !validateContact.phone(phone))
+    if(phone && phone !== "" && !validateContact.phone(phone))
       return { error: "The phone number entered is invalid" };
-    if(email && !validateContact.email(email))
+    if(email && email !== "" && !validateContact.email(email))
       return { error: "The email entered is invalid" };
     
     if (processContact) {
