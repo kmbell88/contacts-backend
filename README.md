@@ -62,7 +62,7 @@ Returns an array of contact objects.
 
 ---
 
-### **GET** /api/v1/contacts/:id
+### **GET** /api/v1/contacts/id/:id
 
 Returns a single contact as an object.
 
