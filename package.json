@@ -4,7 +4,7 @@
   "description": "This is an practice application using Node.js with express, TypeScript, and the testing software Mocha with Chai.",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "ts-node-dev src/index.ts",
     "build": "tsc",
     "test": "mocha -r ts-node/register api/v1/test/**/*.spec.ts"
   },
