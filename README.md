@@ -78,7 +78,7 @@ Returns a single contact as an object.
 
 ---
 
-### **POST** /api/v1/contacts/
+### **POST** /api/v1/contacts
 
 Creates a new contact.
 
@@ -101,7 +101,7 @@ Creates a new contact.
 
 ---
 
-### **PATCH** /api/v1/contacts/
+### **PATCH** /api/v1/contacts
 
 Updates an existing contact<br>
 **Note:** You must only pass optional parameters that you want updated in the contact. Optional parameters sent as empty strings, undefined, or null may overwrite values in the database unintentionally or return a 422 status. Specific reasoning for this is because a user may want to remove an optional field such as a phone number or email without replacing it with a new value, so by sending an empty string it will overwrite the value with the empty string<br>
@@ -128,7 +128,7 @@ Updates an existing contact<br>
 
 ---
 
-### <deleteText>**DELETE**</deleteText> /api/v1/contacts/
+### <deleteText>**DELETE**</deleteText> /api/v1/contacts
 
 Deletes a single contact.
 
