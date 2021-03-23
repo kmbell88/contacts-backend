@@ -4,7 +4,7 @@ import { Request, Response } from 'express';
 export const contacts_get_all_contacts = async (req: Request, res: Response) => {
   let contacts = await getContacts();
   return contacts ? res.status(200).json(contacts) :
-                    res.status(404).json({ error: 'Contacts not found'});
+                    res.status(404).json({ error: 'Contacts not found' });
 };
 
 export const contacts_get_by_id = async (req: Request, res: Response) => {
