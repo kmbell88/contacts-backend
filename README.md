@@ -101,11 +101,11 @@ Creates a new contact.
 
 ---
 
-### **PATCH** /api/v1/contacts
+### **PATCH** /api/v1/contacts/id/:id
 
-Updates an existing contact<br>
+Updates an existing contact.<br>
 **Note:** You must only pass optional parameters that you want updated in the contact. Optional parameters sent as empty strings, undefined, or null may overwrite values in the database unintentionally or return a 422 status. Specific reasoning for this is because a user may want to remove an optional field such as a phone number or email without replacing it with a new value, so by sending an empty string it will overwrite the value with the empty string<br>
-**Suggestion:** If you don't want to send back only specifically updated fields, send back the entire contact object with all fields both updated and not (as you would with a PUT request) to ensure values are not unintentially changed.
+**Suggestion:** If you don't want to send back only specifically updated fields, send back the entire contact object with all fields both updated and not (as you would with a PUT request) to ensure values are not unintentionally changed.
 
 **Requirements:** None<br>
 **Parameters:**
@@ -118,7 +118,7 @@ Updates an existing contact<br>
 
 **Responses:**
 
-- **201:** { message: “Contact successfully updated" }
+- **200:** { message: “Contact successfully updated" }
 - **404:** { error: "Contact not found" }
 - **422:**
   - { error: "The first name entered is invalid" }
@@ -128,14 +128,14 @@ Updates an existing contact<br>
 
 ---
 
-### <deleteText>**DELETE**</deleteText> /api/v1/contacts
+### **DELETE** /api/v1/contacts/id/:id
 
 Deletes a single contact.
 
 **Requirements:** None<br>
 **Parameters:**
 
-- **id**
+- **id**: As a parameter in the endpoint
 
 **Responses:**
 

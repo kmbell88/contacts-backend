@@ -162,7 +162,7 @@ describe('Contacts API', function() {
       };
 
       chai.request(server)
-        .patch('/api/v1/contacts')
+        .patch('/api/v1/contacts/id/' +  + patchContact0.id)
         .type('form')
         .send(patchContact0)
         .end((err, res) => {
@@ -170,7 +170,7 @@ describe('Contacts API', function() {
         });
 
       chai.request(server)
-        .patch('/api/v1/contacts')
+        .patch('/api/v1/contacts/id/'  + patchContact1.id)
         .type('form')
         .send(patchContact1)
         .end((err, res) => {
@@ -178,7 +178,7 @@ describe('Contacts API', function() {
         });
 
       chai.request(server)
-        .patch('/api/v1/contacts')
+        .patch('/api/v1/contacts/id/'  + patchContact2.id)
         .type('form')
         .send(patchContact2)
         .end((err, res) => {
@@ -186,7 +186,7 @@ describe('Contacts API', function() {
         });
 
       chai.request(server)
-        .patch('/api/v1/contacts')
+        .patch('/api/v1/contacts/id/' + patchContact3.id)
         .type('form')
         .send(patchContact3)
         .end((err, res) => {
@@ -194,7 +194,7 @@ describe('Contacts API', function() {
         });
 
       chai.request(server)
-        .patch('/api/v1/contacts')
+        .patch('/api/v1/contacts/id/' + patchContact4.id)
         .type('form')
         .send(patchContact4)
         .end((err, res) => {
@@ -202,7 +202,7 @@ describe('Contacts API', function() {
         });
 
       chai.request(server)
-        .patch('/api/v1/contacts')
+        .patch('/api/v1/contacts/id/' + patchContact5.id)
         .type('form')
         .send(patchContact5)
         .end((err, res) => {
@@ -226,25 +226,22 @@ describe('Contacts API', function() {
       };
 
       chai.request(server)
-        .delete('/api/v1/contacts')
+        .delete('/api/v1/contacts/id/' + deleteContact0.id)
         .type('form')
-        .send(deleteContact0)
         .end((err, res) => {
           expect(res, 'status 200/DELETE valid contact ID').to.have.status(200);
         });
 
       chai.request(server)
-        .delete('/api/v1/contacts')
+        .delete('/api/v1/contacts/id/' + deleteContact1.id)
         .type('form')
-        .send(deleteContact1)
         .end((err, res) => {
           expect(res, 'status 404/DELETE invalid contact ID').to.have.status(404);
         });
 
       chai.request(server)
-        .delete('/api/v1/contacts')
+        .delete('/api/v1/contacts/id/' + deleteContact0.id)
         .type('form')
-        .send(deleteContact0)
         .end((err, res) => {
           expect(res, 'status 404/DELETE same contact twice').to.have.status(404);
         });
