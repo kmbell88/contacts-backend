@@ -83,6 +83,13 @@ describe('Contacts API', function() {
         phone: '5678887766'
       }
 
+      // Sent with no first name should be invalid | expect: status 422
+      const newContact4 = {
+        lname: 'Jones',
+        phone: '8885554444',
+        email: 'jones@gmail.com'
+      }
+
       chai.request(server)
         .post('/api/v1/contacts')
         .type('form')
@@ -113,6 +120,14 @@ describe('Contacts API', function() {
         .send(newContact3)
         .end((err, res) => {
           expect(res, 'status 201/no email').to.have.status(201);
+        });
+
+      chai.request(server)
+        .post('/api/v1/contacts')
+        .type('form')
+        .send(newContact4)
+        .end((err, res) => {
+          expect(res, 'status 201/no first name').to.have.status(422);
         });
     });
   });

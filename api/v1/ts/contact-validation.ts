@@ -26,10 +26,10 @@ export const validateContact = {
     if(id && !processContact)
       return { error: "Contact not found" };
     if (id && fname != undefined && !validateContact.name(fname) ||
-          !id && !validateContact.name(fname))
+          !id && fname == undefined || !validateContact.name(fname))
       return { error: "The first name entered is invalid" };
     if (id && lname != undefined && !validateContact.name(lname) ||
-          !id && !validateContact.name(lname))
+          !id && lname == undefined || !validateContact.name(lname))
       return { error: "The last name entered is invalid" };
     if(phone && phone !== "" && !validateContact.phone(phone))
       return { error: "The phone number entered is invalid" };
